@@ -14,6 +14,16 @@ function setup() {
  * // returns [["Hi", "Hi"], ["Hi", "Hi"], ["Hi", "Hi"]]
  * gridOfStrings(3, 2, "Hi");
  */
+function fillArray(numRows, numCols, message) {
+    const arr = [];
+    for (let row = 0; row < numRows; row++) {
+        arr.push([])
+        for (let col = 0; col < numCols; col++) {
+            arr[row].push(message)
+        }
+    }
+    return arr
+}
 
 
 /**
@@ -24,6 +34,16 @@ function setup() {
  * // returns 22
  * sumAll([1, 3], [3, 4], [5, 6])
  */
+function totalArray(arr) {
+    const sum = 0;
+    for (let row = 0; row < numRows; row++) {
+    sum =+ arr[row]
+        for (let col = 0; col < numCols; col++) {
+        sum =+ arr[col]
+        }
+    }
+    return sum
+}
 
 
 /**
@@ -34,6 +54,7 @@ function setup() {
  * // returns [4, 7, 11]
  * sumInner([1, 3], [3, 4], [5, 6])
  */
+
 
 
 /**

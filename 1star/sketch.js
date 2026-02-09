@@ -2,7 +2,6 @@ function setup() {
     createCanvas(400, 300);
 }
 
-
 /**
  * Creates an array and fills it with integers from 0 up to but not 
  * including maxValue.
@@ -34,6 +33,14 @@ function fillArray(maxValue) {
  * // returns true
  * search([5, -1, 9], 5);
  */
+function searchArray(arr, value) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            return true
+        }
+    }
+    return false
+}
 
 
 /**
@@ -46,6 +53,13 @@ function fillArray(maxValue) {
  * // returns 0
  * total([])
  */
+function totalArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+    sum += arr[i]
+    }
+    return sum
+}
 
 
 /**
@@ -59,6 +73,15 @@ function fillArray(maxValue) {
  * // returns 0
  * count([0, 35, 3, 4, 3], 7)
  */
+function countArray(arr, value) {
+    let no = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            no++
+        }
+    }
+    return no
+}
 
 
 /**
@@ -73,3 +96,12 @@ function fillArray(maxValue) {
  * // returns [4, 4, 4]
  * repeat([4], 3)
  */
+function repeatArray(arr, times) {
+    const result = [];
+    for (let i = 0; i < times; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            result.push(arr[j])
+        }
+    }
+    return result;
+}
